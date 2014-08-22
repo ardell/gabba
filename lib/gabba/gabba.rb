@@ -50,7 +50,7 @@ module Gabba
     #   g = Gabba::Gabba.new("UT-1234", "mydomain.com")
     #
     def initialize(ga_acct, domain, agent = Gabba::USER_AGENT)
-      @utmwv = "4.4sh" # GA version
+      @utmwv = "5.5.4dc" # GA version
       @utmcs = "UTF-8" # charset
       @utmul = "en-us" # language
 
@@ -132,7 +132,6 @@ module Gabba
       request["Accept"] = "*/*"
       uri = URI "http://#{GOOGLE_HOST}/#{BEACON_PATH}"
       response = @http.request(uri, request)
-
       raise GoogleAnalyticsNetworkError unless response.code == "200"
       response
     end
