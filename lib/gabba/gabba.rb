@@ -53,6 +53,7 @@ module Gabba
       @utmwv = "5.5.4dc" # GA version
       @utmcs = "UTF-8" # charset
       @utmul = "en-us" # language
+      @utmcu = "USD" # currency
 
       @utmn = random_id
       @utmhid = random_id
